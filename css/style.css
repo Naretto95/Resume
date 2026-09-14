@@ -757,6 +757,17 @@ h6 {
   gap: 10px;
 }
 
+.about-card-actions .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card-actions .btn i {
+  display: inline-flex;
+  align-items: center;
+}
+
 /* ==========================================================================
    Skills section
    ========================================================================== */
