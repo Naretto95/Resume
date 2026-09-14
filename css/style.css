@@ -625,17 +625,29 @@ h6 {
   margin-bottom: 0;
 }
 
-.about-strengths li i {
+.about-strengths li i,
+.about-card-row i {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
   border-radius: 12px;
   background: #eef7ff;
   color: #105f94;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-strengths li i {
+  width: 44px;
+  height: 44px;
   font-size: 20px;
+}
+
+.about-strengths li:hover i,
+.about-card-row:hover i {
+  background: #105f94;
+  color: #fff;
+  transform: scale(1.1) rotate(-6deg);
 }
 
 .about-strengths li div {
@@ -704,14 +716,7 @@ h6 {
 .about-card-row i {
   width: 42px;
   height: 42px;
-  border-radius: 12px;
-  background: #eef7ff;
-  color: #105f94;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 18px;
-  flex-shrink: 0;
 }
 
 .about-card-row div {
@@ -1338,6 +1343,12 @@ html.dark-mode {
   & .portfolio-icon {
     background: rgba(16, 95, 148, .2);
     color: #7ec4f2;
+  }
+
+  & .about-strengths li:hover i,
+  & .about-card-row:hover i {
+    background: #105f94;
+    color: #fff;
   }
 
   & .about-link {
